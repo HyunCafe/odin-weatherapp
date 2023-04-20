@@ -28,3 +28,27 @@ Container Humidity
 Container
 Day Time Local Time
 sun rise to sunset with arch graph
+
+
+### Project Layout
+JavaScript modules:
+
+api.js: Handles API requests to a weather service (e.g., OpenWeatherMap, Weather API, or AccuWeather API)
+hamburger.js: Controls the hamburger menu functionality
+current-weather.js: Handles displaying the current weather information
+hourly-forecast.js: Handles displaying the hourly weather forecast
+weekly-forecast.js: Handles displaying the weekly weather forecast
+humidity.js: Handles displaying the humidity information
+day-time.js: Handles displaying the sunrise and sunset times
+utils.js: Contains utility functions that can be shared across different modules (e.g., date formatting, temperature conversion)
+
+
+### Feature Plans
+
+Mobile first design
+Hamburger menu
+Current weather display
+Hourly forecast
+Weekly forecast
+Humidity
+Sunrise and sunset times
