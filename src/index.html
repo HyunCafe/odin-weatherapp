@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <meta name="description" content="Description of the page for search engines">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    </header>
+
+    <main class="main">
+        <section class="current-weather">
+            <h1 class="current-weather__city">City</h1>
+            <h2 class="current-weather__degrees">Weather Degrees</h2>
+            <h3 class="current-weather__condition">Sunny/Rainy Etc</h3>
+            <div class="current-weather__stats">
+                <div class="current-weather__stats-item">
+                    Probability of Rain
+                </div>
+                <div class="current-weather__stats-item">
+                    Temperature
+                </div>
+                <div class="current-weather__stats-item">
+                    UV Levels
+                </div>
+            </div>
+        </section>
+
+        <hr class="separator" />
+
+        <section class="hourly-forecast">
+            <div class="hourly-forecast__timeline">
+              <div class="hourly-forecast__item">
+                <div class="hourly-forecast__time">Time</div>
+                <div class="hourly-forecast__condition">Weather Condition</div>
+                <div class="hourly-forecast__degrees">Degrees</div>
+              </div>
+            </div>
+          </section>
+      
+          <hr class="separator" />    
+
+          <section class="weekly-forecast">
+            <div class="weekly-forecast__container">
+                <div class="weekly-forecast__item">
+                    <div class="weekly-forecast__weekday">Saturday</div>
+                    <div class="weekly-forecast__condition">Weather Condition</div>
+                    <div class="weekly-forecast__degrees">Low/High Degrees</div>
+                  </div>
+
+                  <div class="weekly-forecast__item">
+                    <div class="weekly-forecast__weekday">Sunday</div>
+                    <div class="weekly-forecast__condition">Weather Condition</div>
+                    <div class="weekly-forecast__degrees">Low/High Degrees</div>
+                  </div>
+
+                  <div class="weekly-forecast__item">
+                    <div class="weekly-forecast__weekday">Monday</div>
+                    <div class="weekly-forecast__condition">Weather Condition</div>
+                    <div class="weekly-forecast__degrees">Low/High Degrees</div>
+                  </div>
+
+                  <div class="weekly-forecast__item">
+                    <div class="weekly-forecast__weekday">Tuesday</div>
+                    <div class="weekly-forecast__condition">Weather Condition</div>
+                    <div class="weekly-forecast__degrees">Low/High Degrees</div>
+                  </div>
+
+                  <div class="weekly-forecast__item">
+                    <div class="weekly-forecast__weekday">Wednesday</div>
+                    <div class="weekly-forecast__condition">Weather Condition</div>
+                    <div class="weekly-forecast__degrees">Low/High Degrees</div>
+                  </div>
+
+                  <div class="weekly-forecast__item">
+                    <div class="weekly-forecast__weekday">Thursday</div>
+                    <div class="weekly-forecast__condition">Weather Condition</div>
+                    <div class="weekly-forecast__degrees">Low/High Degrees</div>
+                  </div>
+
+                  <div class="weekly-forecast__item">
+                    <div class="weekly-forecast__weekday">Friday</div>
+                    <div class="weekly-forecast__condition">Weather Condition</div>
+                    <div class="weekly-forecast__degrees">Low/High Degrees</div>
+                  </div>
+
+            </div>
+          </section>
+
+          <hr class="separator" />
+
+        <section class="humidity">
+            <div class="humidity__container">
+                <div class="humidity__item">Humidity</div>
+                <div class="humidity__item">Percentage</div>
+            </div>
+        </section>
+
+        <hr class="separator" />
+
+        <section class="day-time">
+            <div class="day-time__local-time">Day Time Local Time</div>
+            <div class="day-time__sunrise-sunset">
+                <!-- sun rise to sunset arch graph -->
+            </div>
+        </section>
+
+        <hr class="separator" />
+
+    </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2023 Weather App</p>
+      </footer>
+    <script src="/dist/bundle.js"></script>
+</body>
+</html>
