@@ -1,3 +1,5 @@
+import { updateWeatherInfo } from "./current-weather";
+
 const apiKey = 'X5Sip7uKIkUGYS3EZUnarLLlYZRdRWAg';
 const searchQueryInput = document.getElementById('searchQuery');
 const searchButton = document.getElementById('searchButton');
@@ -20,9 +22,10 @@ async function fetchWeatherData(searchQuery) {
     }
 
     const locationKey = locations[0].Key;
+    console.log(locations);
 
     // Now, fetch the weather data for the location key
-    const weatherUrl = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=${apiKey}`;
+    const weatherUrl = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${apiKey}&details=true`;
     const weatherResponse = await fetch(weatherUrl);
 
     if (!weatherResponse.ok) {
@@ -30,8 +33,12 @@ async function fetchWeatherData(searchQuery) {
     }
 
     const weatherData = await weatherResponse.json();
+    weatherData.location = locations[0];
     console.log(weatherData);
-  } catch (error) {
+    updateWeatherInfo(weatherData);
+    
+    
+} catch (error) {
     console.error('There was a problem with the fetch operation:', error);
   }
 }

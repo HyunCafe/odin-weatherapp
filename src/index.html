@@ -21,18 +21,18 @@
         <input type="text" id="searchQuery" placeholder="Enter city or zip code">
           <button id="searchButton">Search</button>
         <section class="current-weather">
-            <h1 class="current-weather__city">City</h1>
-            <h2 class="current-weather__degrees">Weather Degrees</h2>
-            <h3 class="current-weather__condition">Sunny/Rainy Etc</h3>
+            <h1 class="current-weather__city" id="currentWeatherCity">Chicago</h1>
+            <h2 class="current-weather__degrees" id="currentWeatherDegrees">63°</h2>
+            <h3 class="current-weather__condition" id="currentWeatherCondition">Mostly Cloudy</h3>
             <div class="current-weather__stats">
-                <div class="current-weather__stats-item">
-                    Probability of Rain
+                <div class="current-weather__stats-item" id="currentWeatherRainProbability">
+                    0% Probability of Rain
                 </div>
-                <div class="current-weather__stats-item">
-                    Temperature
+                <div class="current-weather__stats-item mid" id="currentWeatherLowHigh">
+                    20° Low / 70° High
                 </div>
-                <div class="current-weather__stats-item">
-                    UV Levels
+                <div class="current-weather__stats-item" id="currentWeatherUV">
+                    Moderate UV Levels
                 </div>
             </div>
         </section>
@@ -103,7 +103,7 @@
         <section class="humidity">
             <div class="humidity__container">
                 <div class="humidity__item">Humidity</div>
-                <div class="humidity__item">Percentage</div>
+                <div class="humidity__item">41%</div>
             </div>
         </section>
 
