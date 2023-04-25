@@ -68,7 +68,7 @@ body {
 
 .current-weather__stats {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -77,7 +77,10 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
+    padding: 0 .5em;
+    margin-top: 1em;
 }
+
 
 .current-weather__stats-item:nth-child(2) {
     border-left: 2px solid white;
@@ -89,6 +92,7 @@ body {
 .hourly-forecast {
     overflow-x: auto;
     white-space: nowrap;
+    margin: 2em .5em 2em .5em;
 }
 
 .hourly-forecast__timeline {
@@ -106,7 +110,11 @@ body {
 /* <------------------------ Weekly Section ------------------------> */
 .weekly-forecast__container {
     display: grid;
+
+
+
     gap: 1.5em;
+    margin: 2em .5em 2em .5em;
 }
 
 .weekly-forecast__item {
@@ -119,18 +127,17 @@ body {
 
 .weekly-forecast__icon {
     color: white;
-    padding-top: .5em;
+    padding-top: .4em;
 }
 
 
 /* <------------------------ Humidity Section ------------------------> */
-.humidity__container {
+
+.humidity__item {
     display: flex;
     justify-content: space-around;
     padding: 1rem 0;
-}
-
-.humidity__item {
+    margin: 2em .5em 2em .5em;
     font-size: 1.2rem;
 }
 

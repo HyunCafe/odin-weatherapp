@@ -1,5 +1,8 @@
+'use strict';
+
 import { updateWeatherInfo } from "./current-weather";
 import { updateWeeklyForecast } from "./weekly-forecast";
+import { updateHumidity } from "./humidity";
 
 const apiKey = 'X5Sip7uKIkUGYS3EZUnarLLlYZRdRWAg';
 const searchQueryInput = document.getElementById('searchQuery');
@@ -36,11 +39,12 @@ async function fetchWeatherData(searchQuery) {
     const weatherData = await weatherResponse.json();
     weatherData.location = locations[0];
 
-    // console.log(weatherData);
+    console.log(weatherData);
     // Update Weather Elements Display
     updateWeatherInfo(weatherData);
     updateWeeklyForecast(weatherData);
-    
+    updateHumidity(weatherData);
+
     
 } catch (error) {
     console.error('There was a problem with the fetch operation:', error);

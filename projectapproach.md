@@ -54,7 +54,7 @@ Humidity
 Sunrise and sunset times
 
 ### Libraries / APIs
-[Skycons](https://darkskyapp.github.io/skycons/)
+[WeatherIcons](https://github.com/erikflowers/weather-icons)
 [AccuWeather](https://developer.accuweather.com/)
 
 Choose an API: Select a weather API to use, such as OpenWeatherMap, Weather API, or AccuWeather API. Sign up for an API key if required.

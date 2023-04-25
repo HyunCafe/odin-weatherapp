@@ -1,4 +1,4 @@
-
+'use strict';
 
 export const updateWeatherInfo = (weatherData) => {
     const city = document.getElementById('currentWeatherCity');

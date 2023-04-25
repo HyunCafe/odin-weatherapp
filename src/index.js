@@ -1,3 +1,5 @@
+'use strict';
+
 import { fetchWeatherData } from "./modules/api.js";
 import {  } from "./modules/hamburger.js";
 import { updateWeatherInfo } from "./modules/current-weather.js";

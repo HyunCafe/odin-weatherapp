@@ -1,3 +1,4 @@
+'use strict';
 
 export const updateWeeklyForecast = (weatherData) => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
