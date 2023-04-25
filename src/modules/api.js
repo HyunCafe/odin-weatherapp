@@ -1,4 +1,5 @@
 import { updateWeatherInfo } from "./current-weather";
+import { updateWeeklyForecast } from "./weekly-forecast";
 
 const apiKey = 'X5Sip7uKIkUGYS3EZUnarLLlYZRdRWAg';
 const searchQueryInput = document.getElementById('searchQuery');
@@ -34,8 +35,11 @@ async function fetchWeatherData(searchQuery) {
 
     const weatherData = await weatherResponse.json();
     weatherData.location = locations[0];
-    console.log(weatherData);
+
+    // console.log(weatherData);
+    // Update Weather Elements Display
     updateWeatherInfo(weatherData);
+    updateWeeklyForecast(weatherData);
     
     
 } catch (error) {

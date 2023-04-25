@@ -35,3 +35,4 @@ export const updateWeatherInfo = (weatherData) => {
         return `Unknown UV Levels ${uvIndex}`;
     }
 }
+
