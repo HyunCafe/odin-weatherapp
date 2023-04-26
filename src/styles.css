@@ -61,6 +61,17 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.current-weather__condition-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  #currentWeatherIcon {
+    margin: 0 0 2em .5em;
+  }
+
 .current-weather__condition {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -150,10 +161,73 @@ body {
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
+.daytime-module {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .daytime-arc {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .arc-svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .arc-path {
+    fill: none;
+    stroke: #FFC107;
+    stroke-width: 3;
+  }
+  
+  .sun-icon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #FFC107;
+  }
+  
+  .wind-direction-container {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .wind-direction {
+    display: block;
+    font-size: 1rem;
+  }
+  
+  .wind-speed {
+    display: block;
+    font-size: 1rem;
+  }
+  
+  .windmill-icon-container {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #FFFFFF;
+  }
 
-.day-time__sunrise-sunset {
-    /*  sun rise to sunset arch graph styles  */
-}
+  /* <------------------------ Footer ------------------------> */
 
 .footer {
     position: fixed;

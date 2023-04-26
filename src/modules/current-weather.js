@@ -1,6 +1,9 @@
 'use strict';
 
+import { getWeatherIcon } from "./weekly-forecast";
+
 export const updateWeatherInfo = (weatherData) => {
+    const weatherIcon = document.querySelector('.weekly-forecast__icon');
     const city = document.getElementById('currentWeatherCity');
     const degrees = document.getElementById('currentWeatherDegrees');
     const condition = document.getElementById('currentWeatherCondition');
@@ -15,6 +18,11 @@ export const updateWeatherInfo = (weatherData) => {
     rainProbability.textContent = `${weatherData.DailyForecasts[0].Day.PrecipitationProbability}% Probability of Rain`;
     lowHigh.textContent = `${weatherData.DailyForecasts[0].Temperature.Minimum.Value}° Low / ${weatherData.DailyForecasts[0].Temperature.Maximum.Value}° High`;
   
+   // Set the weather icon
+   const iconCode = weatherData.DailyForecasts[0].Day.IconPhrase;
+   const iconClass = getWeatherIcon(iconCode);
+   weatherIcon.className = `weekly-forecast__icon wi ${iconClass}`;
+
     // Find the UV index 
     const uvIndex = weatherData.DailyForecasts[1].AirAndPollen.find((item) => item.Name === 'UVIndex').Value;
     uv.textContent = getUVLevelText(weatherData.DailyForecasts[0].AirAndPollen[5].Value);
