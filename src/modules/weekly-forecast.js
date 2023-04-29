@@ -33,7 +33,7 @@ export const updateWeeklyForecast = (weatherData) => {
     if (phrase.includes('cloudy') || phrase.includes('intermittent') || phrase.includes('partly')) {
       return phrase.includes('night') ? 'wi-night-alt-cloudy' : 'wi-day-cloudy';
     }
-    if (phrase.includes('rain') || phrase.includes('showers')) {
+    if (phrase.includes('rain') || phrase.includes('showers') || phrase.includes('storms')) {
       return 'wi-rain';
     }
     if (phrase.includes('snow') || phrase.includes('flurries')) {

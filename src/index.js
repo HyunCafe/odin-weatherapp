@@ -9,7 +9,3 @@ import {  } from "./modules/humidity.js";
 import {  } from "./modules/day-time.js";
 
 
-
-console.log('hello world')
-
-
