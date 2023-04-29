@@ -149,7 +149,8 @@ body {
 .hourly-forecast {
   overflow-x: auto;
   white-space: nowrap;
-  margin: 2em 0.5em 2em 0.5em;
+  margin: 2em 0.5em .5em 0.5em;
+  padding-bottom: 1.5em; 
 }
 
 .hourly-forecast__timeline {
