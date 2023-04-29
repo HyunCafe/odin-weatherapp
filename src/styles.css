@@ -188,6 +188,7 @@ body {
 
 .weekly-forecast__icon {
   color: white;
+  padding-top: .4em;
 }
 
 /* <------------------------ Humidity Section ------------------------> */
@@ -284,4 +285,14 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2em 0 1.5em 0;
+  }
+
+/* <------------------------ Media Queries ------------------------> */
+
+  @media (min-width: 650px) {
+    .main {
+        width: 65%;
+        margin: 3em auto;
+        border: 2px white solid;
+    }
   }

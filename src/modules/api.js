@@ -7,7 +7,7 @@ import { getHourlyForecast, updateHourlyForecast } from "./hourly-forecast";
 
 const apiKey = "X5Sip7uKIkUGYS3EZUnarLLlYZRdRWAg";
 const searchQueryInput = document.getElementById("searchQuery");
-const searchButton = document.getElementById("searchButton");
+const searchForm = document.getElementById("searchForm");
 
 async function fetchWeatherData(searchQuery) {
   try {
@@ -29,7 +29,7 @@ async function fetchWeatherData(searchQuery) {
     }
 
     const locationKey = locations[0].Key;
-    console.log(locations);
+    // console.log(locations);
 
     // Now, fetch the weather data for the location key
     const weatherUrl = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${apiKey}&details=true`;
@@ -48,12 +48,12 @@ async function fetchWeatherData(searchQuery) {
     }
 
     const hourlyWeatherData = await hourlyWeatherResponse.json();
-    console.log(hourlyWeatherData);
+    // console.log(hourlyWeatherData);
 
     const weatherData = await weatherResponse.json();
     weatherData.location = locations[0];
 
-    console.log(weatherData);
+    // console.log(weatherData);
     // Update Weather Elements Display
     updateWeatherInfo(weatherData);
     updateWeeklyForecast(weatherData);
@@ -65,7 +65,8 @@ async function fetchWeatherData(searchQuery) {
   }
 }
 
-searchButton.addEventListener("click", () => {
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent the form from submitting and refreshing the page
   const searchQuery = searchQueryInput.value; // Get the user's input
   fetchWeatherData(searchQuery);
 });
