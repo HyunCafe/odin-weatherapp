@@ -1,240 +1,274 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 /* <------------------------ Global Section ------------------------> */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  cursor: default;
+}
+
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #f0f0f0;
-    color: #ffffff;
-    background-color: #0077be;
-    text-align: center;
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  background-image: url(assets/bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 /* <------------------------ Header/Nav Section ------------------------> */
 .header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5em;
 }
 
 .header__menu {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#searchQuery {
+  background-color: transparent;
+  box-shadow: 4px 8px 32px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.713);
+  padding: .3em .5em;
+  font-size: 1rem;
+}
+
+#searchButton {
+    background-color: transparent;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.713);
+padding: .25em .5em;
+font-size: 1rem;
 }
 
 /* Hamburger menu */
 .header__hamburger {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 1.5em;
-    height: 1.2em;
-    cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.5em;
+  height: 1.2em;
+  cursor: pointer;
 }
 
 .header__hamburger span {
-    display: block;
-    width: 100%;
-    height: 0.2em;
-    background-color: #ffffff;
-    border-radius: 2px;
+  display: block;
+  width: 100%;
+  height: 0.2em;
+  background-color: #ffffff;
+  border-radius: 2px;
 }
-
 
 /* <------------------------ Current Weather Section ------------------------> */
 .current-weather {
-    text-align: center;
-    color: #fff;
-    padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+  padding: 2em 0;
 }
 
 .current-weather__city {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .current-weather__degrees {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .current-weather__condition-container {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  
-  #currentWeatherIcon {
-    margin: 0 0 2em .5em;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
 
+#currentWeatherIcon {
+  margin: 0 0 2em 0.5em;
+}
+
+#currentWeatherLowHigh {
+  letter-spacing: 2px;
+}
 .current-weather__condition {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .current-weather__stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .current-weather__stats-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 0 .5em;
-    margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0 0.5em;
+  margin-top: 1em;
 }
-
 
 .current-weather__stats-item:nth-child(2) {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
 }
-
 
 /* <------------------------ Hourly Section ------------------------> */
 .hourly-forecast {
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 2em .5em 2em .5em;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 2em 0.5em 2em 0.5em;
 }
 
 .hourly-forecast__timeline {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
 }
 
 .hourly-forecast__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hourly-forecast__condition {
+  padding: 1.5em 0.5em;
 }
 
 /* <------------------------ Weekly Section ------------------------> */
 .weekly-forecast__container {
-    display: grid;
+  display: grid;
 
-
-
-    gap: 1.5em;
-    margin: 2em .5em 2em .5em;
+  gap: 1.5em;
+  margin: 2em 0.5em 2em 0.5em;
 }
 
 .weekly-forecast__item {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 1em;
-    height: 2em;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1em;
+  height: 2em;
+  align-items: start;
 }
 
 .weekly-forecast__icon {
-    color: white;
-    padding-top: .4em;
+  color: white;
 }
-
 
 /* <------------------------ Humidity Section ------------------------> */
 
 .humidity__item {
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
-    margin: 2em .5em 2em .5em;
-    font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  margin: 2em 0.5em 2em 0.5em;
+  font-size: 1.2rem;
 }
 
 /* <------------------------ Sun Rise Sun Set Section ------------------------> */
 .day-time {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .day-time__local-time {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 .daytime-module {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .daytime-arc {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  
-  .arc-svg {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .arc-path {
-    fill: none;
-    stroke: #FFC107;
-    stroke-width: 3;
-  }
-  
-  .sun-icon-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    color: #FFC107;
-  }
-  
-  .wind-direction-container {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #FFFFFF;
-  }
-  
-  .wind-direction {
-    display: block;
-    font-size: 1rem;
-  }
-  
-  .wind-speed {
-    display: block;
-    font-size: 1rem;
-  }
-  
-  .windmill-icon-container {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: #FFFFFF;
-  }
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* <------------------------ Footer ------------------------> */
+.daytime-arc {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.arc-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.arc-path {
+  fill: none;
+  stroke: #ffc107;
+  stroke-width: 3;
+}
+
+.sun-icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #ffc107;
+}
+
+.wind-direction-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.wind-direction {
+  display: block;
+  font-size: 1rem;
+}
+
+.wind-speed {
+  display: block;
+  font-size: 1rem;
+}
+
+.windmill-icon-container {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* <------------------------ Footer ------------------------> */
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
