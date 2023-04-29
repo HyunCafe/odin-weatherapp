@@ -193,8 +193,8 @@ body {
 .humidity__item {
   display: flex;
   justify-content: space-around;
-  padding: 1rem 0;
-  margin: 2em 0.5em 2em 0.5em;
+  padding: .5em 0;
+  margin: 1em 0.5em;
   font-size: 1.2rem;
 }
 
