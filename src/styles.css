@@ -14,7 +14,8 @@ body {
   font-family: "Lato", sans-serif;
   color: #ffffff;
   text-align: center;
-  background-image: url(assets/bg1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+    url(assets/bg1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -39,18 +40,24 @@ body {
   background-color: transparent;
   box-shadow: 4px 8px 32px 0 rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.713);
-  padding: .3em .5em;
+  border: 2px solid rgba(255, 255, 255, 0.713);
+  padding: 0.3em 0.5em;
   font-size: 1rem;
 }
 
+#searchQuery::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
 #searchButton {
-    background-color: transparent;
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-border-radius: 10px;
-border: 1px solid rgba(255, 255, 255, 0.713);
-padding: .25em .5em;
-font-size: 1rem;
+  background-color: transparent;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.713);
+  padding: 0.25em 0.5em;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 /* Hamburger menu */
@@ -91,6 +98,7 @@ font-size: 1rem;
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  letter-spacing: 5px;
 }
 
 .current-weather__condition-container {
@@ -107,6 +115,7 @@ font-size: 1rem;
 #currentWeatherLowHigh {
   letter-spacing: 2px;
 }
+
 .current-weather__condition {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -159,16 +168,15 @@ font-size: 1rem;
 /* <------------------------ Weekly Section ------------------------> */
 .weekly-forecast__container {
   display: grid;
-
   gap: 1.5em;
-  margin: 2em 0.5em 2em 0.5em;
+  padding: 2em .5em;
 }
 
 .weekly-forecast__item {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 1em;
-  height: 2em;
+  height: 3em;
   align-items: start;
 }
 
@@ -195,6 +203,7 @@ font-size: 1rem;
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
+
 .daytime-module {
   position: relative;
   width: 100%;

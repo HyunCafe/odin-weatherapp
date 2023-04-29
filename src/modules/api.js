@@ -69,4 +69,4 @@ searchButton.addEventListener("click", () => {
   const searchQuery = searchQueryInput.value; // Get the user's input
   fetchWeatherData(searchQuery);
 });
-fetchWeatherData(searchQuery);
+fetchWeatherData("Chicago");
