@@ -12,7 +12,7 @@ const searchForm = document.getElementById("searchForm");
 async function fetchWeatherData(searchQuery) {
   try {
     // First, fetch the location key based on the search query
-    const locationUrl = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${encodeURIComponent(
+    const locationUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${encodeURIComponent(
       searchQuery
     )}`;
     const locationResponse = await fetch(locationUrl);
@@ -32,7 +32,7 @@ async function fetchWeatherData(searchQuery) {
     // console.log(locations);
 
     // Now, fetch the weather data for the location key
-    const weatherUrl = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${apiKey}&details=true`;
+    const weatherUrl = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${apiKey}&details=true`;
     const weatherResponse = await fetch(weatherUrl);
 
     if (!weatherResponse.ok) {
@@ -40,7 +40,7 @@ async function fetchWeatherData(searchQuery) {
     }
 
     // Fetch hourly weather data for the location key
-    const hourlyWeatherUrl = `http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${locationKey}?apikey=${apiKey}`;
+    const hourlyWeatherUrl = `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${locationKey}?apikey=${apiKey}`;
     const hourlyWeatherResponse = await fetch(hourlyWeatherUrl);
 
     if (!hourlyWeatherResponse.ok) {
