@@ -12,13 +12,10 @@ While working on the Weather App, I continued to expand my knowledge of web deve
 * Dynamic wallpaper based on location: Update the app's background image to change based on the user's searched location, providing a more immersive experience that better reflects the city's atmosphere.
 
 
-
-<!-- 
-![Project Animation](/Animation.gif)
+![Project Animation](/weather.gif.gif)
 <p align="center">
-<a href="https://hyuncafe.github.io/odin-/" target="_blank">Live Link</a>
-</p> -->
-
+<a href="https://hyuncafe.github.io/odin-weatherapp/" target="_blank">Live Link</a>
+</p> 
 
 ### Summary of Key Features:
 * Mobile-first design: The app is designed with a mobile-first approach, ensuring a seamless experience on mobile devices.
@@ -28,8 +25,9 @@ While working on the Weather App, I continued to expand my knowledge of web deve
 * Humidity information: The app displays the current humidity percentage and possibly humidity trends.
 * Responsive design: The app features a responsive design that adapts to different screen sizes and orientations.
 
-### APIs Used:
+### Libraries/APIs Used:
 * [AccuWeather](https://developer.accuweather.com/)
+* [WeatrherIcons](https://github.com/erikflowers/weather-icons)
 
 
 ## Project Timeline
