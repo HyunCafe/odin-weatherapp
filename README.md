@@ -12,7 +12,7 @@ While working on the Weather App, I continued to expand my knowledge of web deve
 * Dynamic wallpaper based on location: Update the app's background image to change based on the user's searched location, providing a more immersive experience that better reflects the city's atmosphere.
 
 
-![Project Animation](/weather.gif.gif)
+![Project Animation](/weather.gif)
 <p align="center">
 <a href="https://hyuncafe.github.io/odin-weatherapp/" target="_blank">Live Link</a>
 </p> 
