@@ -58,3 +58,19 @@ While working on the Weather App, I continued to expand my knowledge of web deve
 * Style: Body flex for footer positioning
 * Style: Fixed humidity section spacing
 * Style: Adjusted padding and fixed horizontal scrollbar
+
+#### Apr 29, 2023
+* Add: Replace weather gif in README
+* Fix: Update gif, add assets to docs, fix CSS src path
+* Fix: Use HTTPS for fetch, fix image filepath
+* Fix: Correct gif filepath in README
+* Build: Run npm build for GitHub Pages
+* Docs: Update README with gif
+* Refactor: Use DOM element instead of template literal
+
+#### Apr 30, 2023
+* Add: Include icons in hourly forecast
+* Validator: Check HTML with validator
+* Add: Enable search with Enter key
+* Create: Update README with project info and commits
+* Remove: Delete unnecessary modules
