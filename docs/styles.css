@@ -14,7 +14,7 @@ body {
   font-family: "Lato", sans-serif;
   color: #ffffff;
   text-align: center;
-  background-image: url(../src/assets/bg1.jpg);
+  background-image: url(assets/bg1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
